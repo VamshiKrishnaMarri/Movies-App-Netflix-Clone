@@ -1,0 +1,23 @@
+.similar-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.more-heading {
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 31px;
+  color: #ffffff;
+  margin-left: 20px;
+}
+.detail-loader {
+  background-color: #181818;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 15px;
+  border-radius: 8px;
+}

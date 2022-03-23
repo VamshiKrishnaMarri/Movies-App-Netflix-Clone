@@ -1,0 +1,80 @@
+.log-in-app-container {
+  background-color: #131313;
+  height: 100vh;
+  background-size: cover;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .log-in-app-container {
+    background-image: url('https://res.cloudinary.com/dps34f4by/image/upload/v1646987880/netfilx_1_fofofo.jpg');
+    min-height: 100vh;
+    background-size: cover;
+  }
+}
+.logo {
+  height: 28px;
+  margin: 12px;
+}
+.form-container {
+  background-color: #0c0b10;
+  border-radius: 8px;
+  opacity: 0.8;
+  padding: 20px;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+.form-heading {
+  margin: 0;
+  color: #ffffff;
+  font-family: roboto;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 15px;
+}
+.input-label {
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+.input {
+  height: 32px;
+  padding: 5px;
+  background: #333333;
+  border-width: 0;
+  top: 24px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 2px;
+  width: 300px;
+  color: white;
+}
+.button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sign-in-button {
+  width: 300px;
+  background: #e50914;
+  border-radius: 4px;
+  height: 32px;
+  border-width: 0;
+  margin-top: 25px;
+  color: white;
+  font-family: roboto;
+  cursor: pointer;
+}
+.error-msg {
+  color: red;
+}

@@ -1,0 +1,31 @@
+.failure-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 24px;
+  color: black;
+
+  background: #ffffff;
+  border-radius: 4px;
+}
+.failure-heading {
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+
+  text-align: center;
+
+  color: #ffffff;
+}
+.failure-container {
+  background-color: #181818;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 8px;
+}

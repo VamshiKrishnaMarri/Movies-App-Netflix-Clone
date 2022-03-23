@@ -1,0 +1,132 @@
+.movie-details-top-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.time-container {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.hours {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 23px;
+  color: #ffffff;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+.adult {
+  color: #ffffff;
+  background-color: transparent;
+  font-size: 15px;
+  padding: 1px 5px;
+  border: 2px solid #ffffff;
+  margin-right: 10px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .hours {
+    font-size: 10px;
+    line-height: 20px;
+  }
+  .language {
+    font-size: 10px;
+    padding: 1px 3px;
+  }
+}
+.genre-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+}
+@media (max-width: 767px) {
+  .genre-container {
+    width: 90%;
+  }
+}
+.genre-heading {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 5px;
+
+  /* identical to box height, or 144% */
+
+  /* Light / blue-gray / 500 */
+  color: #64748b;
+}
+
+.genre-option {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+
+  /* or 150% */
+
+  /* General/White */
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .genre-heading {
+    font-size: 15px;
+    margin-bottom: 2px;
+  }
+  .genre-option {
+    font-size: 13px;
+  }
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+  margin: 10px;
+}
+
+.similar-movies-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+}
+
+.similar-movie-image {
+  height: 150px;
+  width: 150px;
+  border-radius: 10px;
+  margin-right: 25px;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .similar-movies-container {
+    width: 83%;
+  }
+  .similar-movie-image {
+    height: 200px;
+    width: 140px;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+}
+
+.similar-heading {
+  color: #ffffff;
+  width: 80%;
+  margin: auto;
+}
+
+@media (max-width: 767px) {
+  .similar-heading {
+    font-size: 20px;
+    width: 85%;
+  }
+}

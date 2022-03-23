@@ -1,0 +1,133 @@
+.nav-container {
+  background-color: #13131330;
+  min-height: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.nav-mobile-container {
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+@media screen and (min-width: 567px) {
+  .nav-mobile-container {
+    display: none;
+  }
+}
+.active-one {
+  color: #ffffff;
+  font-weight: 800;
+  border-bottom: 2px solid blue;
+}
+
+.passive-one {
+  color: #ffffff90;
+}
+.nav-desktop-container {
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+}
+@media screen and (max-width: 567px) {
+  .nav-desktop-container {
+    display: none;
+  }
+}
+
+.list-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.link {
+  text-decoration: none;
+  outline: none;
+}
+.search {
+  size: 20px;
+  background-color: #131313;
+  border-width: 2px 1px 0.5px 1px;
+  border-color: grey;
+  margin-right: 8px;
+}
+
+.profile-logo {
+  height: 35px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.search-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #909090;
+  width: 70px;
+  border: none;
+  cursor: pointer;
+}
+.icons-container {
+  display: flex;
+  justify-content: center;
+}
+.icon-button {
+  background-color: transparent;
+  border-width: 0;
+  padding-top: 5px;
+}
+
+.icon {
+  color: #ffffff;
+  height: 28px;
+
+  margin-left: 10px;
+}
+.pop-heading {
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 26px;
+  /* identical to box height, or 162% */
+
+  letter-spacing: -0.355556px;
+  margin-left: 35px;
+
+  color: #ffffff;
+}
+
+.menu-mobile {
+  display: none;
+}
+@media screen and (max-width: 567px) {
+  .menu-mobile {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+.home-heading {
+  font-family: HK Grotesk;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: -0.35555556416511536px;
+  text-align: left;
+  color: #ffffff;
+  margin-left: 10px;
+  align-self: flex-start;
+}
+
+.search-menu-icon-container {
+  display: flex;
+  border: 1px solid #909090;
+  border-radius: 3px;
+  margin: 20px;
+  width: 90%;
+  height: 40px;
+}

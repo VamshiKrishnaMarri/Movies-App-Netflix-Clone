@@ -1,0 +1,117 @@
+.home-bg-container {
+  background-color: #131313;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+.home-container {
+  height: 427px;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media screen and (min-width: 360px) {
+  .home-container {
+    background-image: url('https://res.cloudinary.com/dps34f4by/image/upload/v1647258070/Image_lwmdhk.png');
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 456px) {
+  .home-container {
+    background-image: url('https://res.cloudinary.com/dps34f4by/image/upload/v1647258070/Image_lwmdhk.png');
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+  }
+}
+.failure-view-container {
+  background-color: #131313;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-button {
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  margin-left: 25px;
+  /* identical to box height, or 114% */
+
+  letter-spacing: 0.05em;
+  font-variant: small-caps;
+
+  /* General/Dark blue */
+
+  color: #171f46;
+}
+
+@media screen and (min-width: 768px) {
+  .home-button {
+    height: 40px;
+    width: 80px;
+  }
+}
+.home-movie-heading {
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 47px;
+  padding-left: 25px;
+  /* identical to box height */
+
+  /* General/White */
+
+  color: #ffffff;
+}
+@media screen and(min-width:768px) {
+  .home-movie-heading {
+    font-size: 48px;
+  }
+}
+.overview {
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  padding-left: 25px;
+
+  color: #ffffff;
+}
+@media screen and(min-width:768px) {
+  .overview {
+    font-size: 22px;
+  }
+}
+.heading-container {
+  padding: 15px;
+}
+.trending-heading {
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  color: #ffffff;
+  margin-left: 45px;
+}
+.img-bottom-style {
+  left: 0%;
+  right: 0%;
+  top: 26.26%;
+  bottom: 64.14%;
+  height: 165px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(24, 24, 24, 0.546875) 38.26%,
+    #181818 92.82%,
+    #181818 98.68%,
+    #181818 108.61%
+  );
+}
