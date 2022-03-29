@@ -9,8 +9,8 @@ import './index.css'
 
 class Header extends Component {
   state = {
-    showSearchBar: false,
     showMenu: false,
+    showSearchBar: false,
   }
 
   onClickSearchIcon = () => {
@@ -35,7 +35,7 @@ class Header extends Component {
   }
 
   render() {
-    const {showSearchBar, showMenu} = this.state
+    const {showMenu, showSearchBar} = this.state
     const {match} = this.props
     const {path} = match
     let homeClassName
@@ -59,48 +59,10 @@ class Header extends Component {
         accountClassName = 'passive-one'
         break
     }
+
     return (
       <nav className="nav-container">
-        <div className="nav-mobile-container">
-          <Link to="/">
-            <img
-              src="https://res.cloudinary.com/dps34f4by/image/upload/v1646985280/Group_7399_1_rs0qmy.png"
-              className="app-logo"
-              alt="website logo"
-            />
-          </Link>
-          <div className="icons-container">
-            {showSearchBar && (
-              <input
-                type="search"
-                onKeyDown={this.onChangeSearchInput}
-                placeholder="search"
-                className="search"
-              />
-            )}
-            <Link to="/search">
-              <button
-                type="button"
-                className="icon-button"
-                testid="searchButton"
-              >
-                <HiOutlineSearch
-                  size={20}
-                  color="white"
-                  onClick={this.onClickSearchIcon}
-                />
-              </button>
-            </Link>
-            <MdMenuOpen
-              size={25}
-              color="white"
-              className="icon"
-              onClick={this.onClickMenu}
-            />
-          </div>
-        </div>
-
-        <div className="nav-desktop-container">
+        <div className="nav-elements-container">
           <Link to="/">
             <img
               src="https://res.cloudinary.com/dps34f4by/image/upload/v1646985280/Group_7399_1_rs0qmy.png"
@@ -116,7 +78,7 @@ class Header extends Component {
               <li className={`pop-heading ${popularClassName}`}>Popular</li>
             </Link>
           </ul>
-          <div className="list-items">
+          <div className="search-container">
             {showSearchBar && (
               <input
                 type="search"
@@ -146,11 +108,17 @@ class Header extends Component {
                 alt="profile"
               />
             </Link>
+            <MdMenuOpen
+              size={25}
+              color="white"
+              className="menu-icon"
+              onClick={this.onClickMenu}
+            />
           </div>
         </div>
         {showMenu && (
-          <div className="menu-mobile">
-            <ul className="list-items">
+          <div>
+            <ul className="list-mini">
               <Link to="/" className="link">
                 <li className={`pop-heading ${homeClassName}`}>Home</li>
               </Link>
