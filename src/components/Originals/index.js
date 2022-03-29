@@ -47,6 +47,8 @@ class Originals extends Component {
         originalsData: updatedData,
         apiStatus: apiStatusConstants.success,
       })
+    } else {
+      this.setState({apiStatus: apiStatusConstants.failure})
     }
   }
 

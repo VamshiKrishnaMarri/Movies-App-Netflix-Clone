@@ -85,7 +85,6 @@ class MovieDetails extends Component {
         id: each.id,
         language: each.english_name,
       }))
-      console.log(updatedSimilarData)
 
       this.setState({
         movieDetails: updatedData,
@@ -94,6 +93,8 @@ class MovieDetails extends Component {
         similarMovies: updatedSimilarData.slice(0, 6),
         apiStatus: apiStatusConstants.success,
       })
+    } else {
+      this.setState({apiStatus: apiStatusConstants.failure})
     }
   }
 

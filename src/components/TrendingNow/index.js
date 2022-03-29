@@ -43,6 +43,8 @@ class TrendingNow extends Component {
         trendingNowData: updatedData,
         apiStatus: apiStatusConstants.success,
       })
+    } else {
+      this.setState({apiStatus: apiStatusConstants.failure})
     }
   }
 

@@ -63,13 +63,13 @@ class Search extends Component {
           <ul className="search-movies-container">
             {searchMovies.map(each => (
               <Link to={`/movies/${each.id}`}>
-                <div className="search-item" key={each.id}>
+                <li className="search-item" key={each.id}>
                   <img
                     className="search-poster"
                     src={each.posterPath}
                     alt={each.title}
                   />
-                </div>
+                </li>
               </Link>
             ))}
           </ul>
@@ -79,7 +79,7 @@ class Search extends Component {
   }
 
   renderLoading = () => (
-    <div className="loader-container">
+    <div className="loader-container" testid="loader">
       <Loader type="TailSpin" color="#D81F26" height={60} width={60} />
     </div>
   )

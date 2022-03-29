@@ -48,13 +48,13 @@ class MovieCard extends Component {
       <Slider {...settings}>
         {moviesList.map(each => (
           <Link to={`/movies/${each.id}`}>
-            <div testid="MovieCard" className="react-slick-item" key={each.id}>
+            <li testid="MovieCard" className="react-slick-item" key={each.id}>
               <img
                 className="poster"
                 src={each.posterPath}
                 alt={each.originalTitle}
               />
-            </div>
+            </li>
           </Link>
         ))}
       </Slider>
