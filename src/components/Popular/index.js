@@ -50,13 +50,13 @@ class Popular extends Component {
         apiStatus: apiStatusConstants.success,
         popularMovies: updatedData,
       })
-      const {popularMovies} = this.state
-      console.log(popularMovies)
+    } else {
+      this.setState({apiStatus: apiStatusConstants.failure})
     }
   }
 
   renderLoadingView = () => (
-    <div className="loader-container" data-testid="loader">
+    <div className="loader-container" testid="loader">
       <Loader type="TailSpin" height={40} color="#d81f26" />
     </div>
   )
@@ -70,12 +70,12 @@ class Popular extends Component {
       <div className="failure-view">
         <img
           src="https://res.cloudinary.com/dps34f4by/image/upload/v1647168025/Background-Complete_bn4zsr.png"
-          alt="failure"
+          alt="failure view"
           className="failure-image"
         />
-        <h1 className="failure-heading">
+        <p className="failure-heading">
           Something went wrong. Please try again
-        </h1>
+        </p>
         <button
           type="button"
           className="failure-button"
@@ -95,13 +95,13 @@ class Popular extends Component {
           <ul className="popular-container">
             {popularMovies.map(each => (
               <Link to={`/movies/${each.id}`}>
-                <div className="popular-item" key={each.id}>
+                <li className="popular-item" key={each.id}>
                   <img
                     className="popular-poster"
                     src={each.posterPath}
-                    alt={each.originalTitle}
+                    alt={each.title}
                   />
-                </div>
+                </li>
               </Link>
             ))}
           </ul>

@@ -39,7 +39,7 @@
 }
 .genre-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   width: 80%;
   margin: auto;

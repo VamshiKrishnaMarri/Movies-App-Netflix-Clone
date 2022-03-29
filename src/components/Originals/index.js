@@ -21,6 +21,10 @@ class Originals extends Component {
     this.getOriginalsMovies()
   }
 
+  onClickTryAgain = () => {
+    this.getOriginalsMovies()
+  }
+
   getOriginalsMovies = async () => {
     this.setState({apiStatus: apiStatusConstants.inProgress})
     const jwtToken = Cookies.get('jwt_token')

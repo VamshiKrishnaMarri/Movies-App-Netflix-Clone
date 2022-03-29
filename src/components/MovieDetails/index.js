@@ -5,7 +5,7 @@ import Cookies from 'js-cookie'
 import MovieInfo from '../MovieInfo'
 import LoadingView from '../LoadingView'
 import FailureView from '../FailureView'
-import Header from '../Header'
+
 import Footer from '../Footer'
 
 import './index.css'
@@ -23,6 +23,8 @@ class MovieDetails extends Component {
     apiStatus: apiStatusConstants.initial,
     movieDetails: [],
     similarMovies: [],
+    genres: [],
+    spokenLanguages: [],
   }
 
   componentDidMount() {
@@ -61,7 +63,6 @@ class MovieDetails extends Component {
         budget: each.budget,
         title: each.title,
         overview: each.overview,
-        genres: each.genres,
         originalLanguage: each.original_language,
         releaseDate: each.release_date,
         count: each.vote_count,
@@ -76,10 +77,20 @@ class MovieDetails extends Component {
           title: each.title,
         }),
       )
+      const genresData = data.movie_details.genres.map(each => ({
+        id: each.id,
+        name: each.name,
+      }))
+      const languagesData = data.movie_details.spoken_languages.map(each => ({
+        id: each.id,
+        language: each.english_name,
+      }))
       console.log(updatedSimilarData)
 
       this.setState({
         movieDetails: updatedData,
+        genres: genresData,
+        spokenLanguages: languagesData,
         similarMovies: updatedSimilarData.slice(0, 6),
         apiStatus: apiStatusConstants.success,
       })
@@ -99,13 +110,32 @@ class MovieDetails extends Component {
   )
 
   renderSuccessView = () => {
-    const {movieDetails, similarMovies} = this.state
+    const {movieDetails, similarMovies, genres, spokenLanguages} = this.state
+
     return (
       <>
         <div>
           {movieDetails.map(each => (
             <MovieInfo movieInfoDetails={each} key={each.id} />
           ))}
+          <div className="genre-container">
+            <ul className="ul-item">
+              <li className="genre-heading">Genres</li>
+              {genres.map(eachGenre => (
+                <li className="genre-option" key={eachGenre.id}>
+                  {eachGenre.name}
+                </li>
+              ))}
+            </ul>
+            <ul>
+              <li className="genre-heading">Available Audio</li>
+              {spokenLanguages.map(eachLanguage => (
+                <li className="genre-option" key={eachLanguage.id}>
+                  {eachLanguage.language}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
         <div className="similar-container">
           <h1 className="more-heading">More Like This</h1>
@@ -116,7 +146,7 @@ class MovieDetails extends Component {
                   <img
                     className="popular-poster"
                     src={each.posterPath}
-                    alt={each.originalTitle}
+                    alt={each.title}
                   />
                 </div>
               </Link>
@@ -145,7 +175,6 @@ class MovieDetails extends Component {
   render() {
     return (
       <div className="home-bg-container">
-        <Header />
         {this.renderMovies()}
         <Footer />
       </div>

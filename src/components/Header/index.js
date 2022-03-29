@@ -53,11 +53,6 @@ class Header extends Component {
         popularClassName = 'passive-one'
         accountClassName = 'active-one'
         break
-      case '/search':
-        homeClassName = 'passive-one'
-        popularClassName = 'active-one'
-        accountClassName = 'passive-one'
-        break
       default:
         homeClassName = 'active-one'
         popularClassName = 'passive-one'
@@ -139,6 +134,7 @@ class Header extends Component {
                 <HiOutlineSearch
                   size={20}
                   color="white"
+                  testid="searchButton"
                   onClick={this.onClickSearchIcon}
                 />
               </button>
@@ -146,7 +142,7 @@ class Header extends Component {
             <Link to="/account">
               <img
                 src="https://res.cloudinary.com/dps34f4by/image/upload/v1647240547/Mask_Group_clhm8s.png"
-                className="profile-logo"
+                className={`profile-logo ${accountClassName}`}
                 alt="profile"
               />
             </Link>

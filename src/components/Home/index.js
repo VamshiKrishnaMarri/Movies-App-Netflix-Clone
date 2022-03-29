@@ -28,6 +28,10 @@ class Home extends Component {
     this.getMoviePoster()
   }
 
+  onClickTryAgain = () => {
+    this.getMoviePoster()
+  }
+
   getMoviePoster = async () => {
     this.setState({apiStatus: apiStatusConstants.inProgress})
     const jwtToken = Cookies.get('jwt_token')
@@ -66,13 +70,13 @@ class Home extends Component {
       <div
         style={{
           backgroundImage: `url(${backdropPath})`,
-          height: '100%',
-          width: '100%',
+          backgroundSize: '100% 100%',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',
         }}
         className="home-container"
+        alt={title}
       >
         <Header />
         <div className="heading-container">

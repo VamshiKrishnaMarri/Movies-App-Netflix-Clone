@@ -1,3 +1,4 @@
+import Header from '../Header'
 import './index.css'
 
 const MovieInfo = props => {
@@ -7,12 +8,11 @@ const MovieInfo = props => {
     adult,
     backdropPath,
     runtime,
+    count,
+    budget,
+    rating,
     releaseDate,
     overview,
-    genres,
-    count,
-    rating,
-    budget,
   } = movieInfoDetails
 
   const hours = Math.floor(runtime / 60)
@@ -35,13 +35,12 @@ const MovieInfo = props => {
       <div
         style={{
           backgroundImage: `url(${backdropPath})`,
-          height: '100%',
-          width: '100%',
+          backgroundSize: '100% 100%',
           backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
         }}
         className="movie-details-top-container"
       >
+        <Header />
         <div className="heading-container">
           <h1 className="home-movie-heading">{title}</h1>
           <p className="time-container">
@@ -56,27 +55,13 @@ const MovieInfo = props => {
         </div>
       </div>
       <div className="genre-container">
-        <ul>
-          <li className="genre-heading">Genres</li>
-          {genres.map(each => (
-            <li className="genre-option" key={each.id}>
-              {each.name}
-            </li>
-          ))}
-        </ul>
-        <ul>
-          <li className="genre-heading">Available Audio</li>
-          <li className="genre-option">English</li>
-          <li className="genre-option">Hindi</li>
-          <li className="genre-option">Telugu</li>
-        </ul>
-        <ul>
+        <ul className="ul-item">
           <li className="genre-heading">Rating Count</li>
           <li className="genre-option">{count}</li>
           <li className="genre-heading">Rating Average</li>
           <li className="genre-option">{rating}</li>
         </ul>
-        <ul>
+        <ul className="ul-item">
           <li className="genre-heading">Budget</li>
           <li className="genre-option">{budget}</li>
           <li className="genre-heading">Release Date</li>
