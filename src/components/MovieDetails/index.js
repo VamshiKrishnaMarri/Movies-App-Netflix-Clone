@@ -143,13 +143,13 @@ class MovieDetails extends Component {
           <ul className="popular-container">
             {similarMovies.map(each => (
               <Link to={`/movies/${each.id}`}>
-                <div className="popular-item" key={each.id}>
+                <li className="popular-item" key={each.id}>
                   <img
                     className="popular-poster"
                     src={each.posterPath}
                     alt={each.title}
                   />
-                </div>
+                </li>
               </Link>
             ))}
           </ul>
